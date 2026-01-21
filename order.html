@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Food</title>
+  <link rel="stylesheet" href="javascript.js">
+ <style>
+    body {
+  font-family: Arial;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.order-container {
+  background: #111;
+  color: white;
+  padding: 25px;
+  width: 320px;
+  border-radius: 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #ffcc00;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+textarea {
+  resize: none;
+  height: 60px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ </style>
+<script>
+       
+let price = 0;
+
+window.onload = function () {
+  let food = localStorage.getItem("foodName");
+  price = localStorage.getItem("foodPrice");
+
+  document.getElementById("foodName").value = food;
+  document.getElementById("foodPrice").value = "₹" + price;
+  updateTotal();
+};
+
+function updateTotal() {
+  let qty = document.getElementById("qty").value;
+  document.getElementById("total").value = "₹" + (price * qty);
+}
+
+function placeOrder(e) {
+  e.preventDefault();
+  alert("✅ Order Placed Successfully!");
+  localStorage.clear();
+}
+</script>
+
+ 
+</head>
+<body>
+
+<div class="order-container">
+  <h2>🍽 Food Order Form</h2>
+
+  <form onsubmit="placeOrder(event)">
+    
+    <label>Food Name</label>
+    <input type="text" id="foodName" readonly>
+
+    <label>Price (₹)</label>
+    <input type="text" id="foodPrice" readonly>
+
+    <label>Quantity</label>
+    <input type="number" id="qty" min="1" value="1" onchange="updateTotal()">
+
+    <label>Total Amount</label>
+    <input type="text" id="total" readonly>
+
+    <label>Your Name</label>
+    <input type="text" required>
+
+    <label>Mobile Number</label>
+    <input type="tel" required>
+
+    <label>Delivery Address</label>
+    <textarea required></textarea>
+
+    <button type="submit">Place Order</button>
+  </form>
+</div>
+
+
+</body>
+</html>

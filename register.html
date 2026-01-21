@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  background: #fff;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff5722;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff5722;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #e64a19;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-link a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+  </style>
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let mobile = document.getElementById("mobile").value;
+  let password = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("confirmPassword").value;
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  alert("Registration Successful!\nWelcome " + name);
+
+  // Optional: Save to localStorage
+  localStorage.setItem("userEmail", email);
+});
+
+  </script>
+</head>
+<body>
+
+<div class="register-container">
+  <h2>Create Account</h2>
+
+  <form id="registerForm">
+    <div class="input-box">
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+    </div>
+
+    <div class="input-box">
+      <label>Email</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="input-box">
+      <label>Mobile Number</label>
+      <input type="tel" id="mobile" required>
+    </div>
+
+    <div class="input-box">
+      <label>Password</label>
+      <input type="password" id="password" required>
+    </div>
+
+    <div class="input-box">
+      <label>Confirm Password</label>
+      <input type="password" id="confirmPassword" required>
+    </div>
+
+    <button type="submit" class="btn">Register</button>
+
+    <p class="login-link">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
