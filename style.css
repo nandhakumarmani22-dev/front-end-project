@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 button {
   margin-left: 0px;
@@ -7,6 +8,15 @@ button {
   margin-left: 40px; 
   margin-right: 30px;
 }
+=======
+/*  */
+button {
+  margin-left: opx;
+  margin-right: 50px;
+
+}
+
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 input {
   width: 50px;
   height: auto;
@@ -43,6 +53,7 @@ a.logo {
   box-shadow: 4px 0px 4px 4px;
 }
 
+<<<<<<< HEAD
 /* ===============================
    NAVBAR RESPONSIVE DESIGN
 ================================= */
@@ -132,15 +143,91 @@ a.logo {
 
 
 
+=======
+@media (max-width: 700px) { 
+
+  /* Logo resize */
+  .logo img {
+    height: 150px !important;
+    width: auto !important;
+  }
+
+  /* Navbar collapse background */
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  /* Menu items full width */
+  .navbar-nav {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-toggler {
+    outline: none;
+    margin-left: 250px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 8px;
+  }
+
+  /* Mega menu becomes normal dropdown */
+  .mega-menu {
+    position: static !important;
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  .mega-menu .row {
+    flex-direction: column;
+  }
+
+  .mega-menu .col-md-6 {
+    max-width: 100%;
+  }
+
+  /* Search bar */
+  .form-control {
+    width: 100%;
+    margin: 10px 0px;
+
+  }
+
+  .btn-outline-success {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Sign button */
+  .login {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 /* banner */
 /* Hero Section */
 .hero-section {
   height: 100vh;
   width: 100%;
+<<<<<<< HEAD
   background: linear-gradient(rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)),
     url("./images/vegetables-set-left-black-slate.jpg");
   /* change image path */
+=======
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("./images/vegetables-set-left-black-slate.jpg"); /* change image path */
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -211,7 +298,11 @@ a.logo {
   background: #1A1A1A;
   color: #eee;
   padding: 50px 0 0px;
+<<<<<<< HEAD
   margin-top: 0px;
+=======
+  margin-top: 20px;
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
   margin-left: 0;
   margin-right: 0;
 }
@@ -376,6 +467,7 @@ a.logo {
   height: 55vh;
   position: relative;
 }
+<<<<<<< HEAD
 
 /* Assam */
 .asbanner {
@@ -401,6 +493,9 @@ a.logo {
 
 
 
+=======
+/* goa */
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 /* about page */
 body {
   padding-top: 90px;
@@ -420,6 +515,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+<<<<<<< HEAD
 section h2 {
     font-weight: bold;
 }
@@ -428,6 +524,9 @@ section p {
     font-size: 16px;
     line-height: 1.7;
 }
+=======
+
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 
 /* learn more! */
 .learn-more {
@@ -708,6 +807,7 @@ a.logo {
   color: #ff6a00;
 }
 
+<<<<<<< HEAD
 
 /* SECTION */
 #section{
@@ -786,10 +886,81 @@ a.logo {
 
 .hide{
   display:none;
+=======
+/* Grid */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Card */
+.food-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-12px);
+}
+
+/* Image */
+.food-img {
+  overflow: hidden;
+}
+
+.food-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.food-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Content */
+.food-content {
+  padding: 22px;
+  text-align: center;
+}
+
+.food-content h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.food-content p {
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Button */
+.food-content button {
+  padding: 10px 22px;
+  border: none;
+  background: #ff6a00;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.food-content button:hover {
+  background: #e55b00;
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 }
 
 
 
+<<<<<<< HEAD
 .highlight {
     background-color: yellow;
     font-weight: bold;
@@ -801,6 +972,14 @@ a.logo {
   background-color: darkgrey;
   text-align: center;
   margin-top: 0px;
+=======
+/* food catagories */
+.category-section {
+  padding: 0px 0px;
+  background: #fffaf4;
+  text-align: center;
+  margin-top: 100px;
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 }
 
 .category-container {
@@ -816,7 +995,11 @@ a.logo {
   overflow: hidden;
   cursor: pointer;
   transition: 0.3s;
+<<<<<<< HEAD
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+=======
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 }
 
 .category-card img {
@@ -852,7 +1035,11 @@ a.logo {
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
+<<<<<<< HEAD
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+=======
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
   transition: 0.3s;
 }
 
@@ -893,7 +1080,11 @@ a.logo {
 
 /* Media tag */
 
+<<<<<<< HEAD
 @media (max-width: 700px) {
+=======
+@media (max-width: 700px) { 
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
 
   /* Logo resize */
   .logo img {
@@ -959,4 +1150,8 @@ a.logo {
   }
 }
 
+<<<<<<< HEAD
 /* register page */
+=======
+/* register page */
+>>>>>>> 8ce155a904fff794caac6924a3d0fdb0b4d8e83a
